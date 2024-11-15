@@ -13,6 +13,22 @@ body {
 #hero-logo {
   height: 120px;
   margin: 5px 0;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 h1 {
@@ -39,10 +55,12 @@ h1 {
   border-radius: 3px;
   cursor: pointer;
   transition: background-color 0.2s;
+  transition: color 0.2s;
 }
 
 .apply-btn:hover {
   background-color: rgb(1, 240, 1);
+  color: white;
   -webkit-animation: btnWiggle 6s infinite;
   -moz-animation: btnWiggle 6s infinite;
   -o-animation: btnWiggle 6s infinite;
@@ -102,6 +120,57 @@ h1 {
 }
 
 .apply-btn:active {
+  opacity: 0.8;
+}
+
+.fp-newsletter {
+  display: block;
+  width: 500px;
+  height: 260px;
+  background-color: white;
+  background-image: url("./images/fp-newsletter-background.webp");
+  color: black;
+  margin: 50px auto;
+  border-radius: 6px;
+}
+
+#fp-newsletter-header {
+  padding-top: 20px;
+  text-decoration-line: underline;
+}
+
+#newsletter-text {
+  width: 300px;
+  text-align: center;
+  margin: 15px auto;
+  font-weight: lighter;
+}
+
+.newsletter-signup-btn {
+  display: block;
+  margin: 20px auto;
+  background-color: black;
+  color: white;
+  padding: 10px 18px 10px 18px;
+  font-size: 15px;
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.newsletter-signup-btn:hover {
+  background-color: rgb(1, 240, 1);
+  color: white;
+  -webkit-animation: btnWiggle 6s infinite;
+  -moz-animation: btnWiggle 6s infinite;
+  -o-animation: btnWiggle 6s infinite;
+  animation: btnWiggle 6s infinite;
+}
+
+.newsletter-signup-btn:active {
   opacity: 0.8;
 }
 
